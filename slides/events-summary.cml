@@ -1,0 +1,10 @@
+<title style="color_pair(Helper::Curses::BLUE)">[ CONCURRENCY ]</title>
+
+<body>
+  <code>
+    <line style="color_pair(Helper::Curses::RUBINE)">SUMMARY:</line>
+    <line>  - Concurrent code in Ruby can be a little ugly</line>
+    <line>    - That feels weird to say, "<span style="color_pair(Helper::Curses::LIGHT_GRAY)">ugly ruby code</span>"</line>
+    <line>  - Lots of opportunities to share global state</line>
+  </code>
+</body>

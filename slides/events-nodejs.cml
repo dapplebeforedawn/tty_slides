@@ -1,0 +1,19 @@
+<title style="color_pair(Helper::Curses::YELLOW)">[ EVENTED PROGRAMMING ]</title>
+
+<body>
+  <code>
+    <line style="color_pair(Helper::Curses::YELLOW)">Custom Evented Code In NodeJS:</line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">emitter = new (require("events").EventEmitter)</line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">emitter.on "someEvent", (data)-></line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)">  # the after-event party here.</line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">setInterval ( -> emitter.emit("someEvent") ), 100</line>
+  </code>
+</body>
+
+<!--
+  - It's really easy to create our own emitter, and register callback on it.
+  - When would this even come up?
+    - Scripts that work with hardware toys.
+    - Respond to changes in a long running program.
+    - A nice abstraction when there's one "server" and many "clients"
+-->

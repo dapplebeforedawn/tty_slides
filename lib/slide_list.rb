@@ -5,6 +5,13 @@ class SlideList
     "introduction",
     "covermymeds",
     "cover-all-mymeds",
+    "concurrency-ruby",
+    "concurrency-go",
+    "concurrency-nodejs",
+    "concurrency-summary",
+    "events-ruby",
+    "events-nodejs",
+    "events-summary",
     "a-gem",
   ]
 

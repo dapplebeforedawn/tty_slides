@@ -1,0 +1,22 @@
+<title style="color_pair(Helper::Curses::RUBINE)">[ CONCURRENCY ]</title>
+
+<body>
+  <code>
+    <line style="color_pair(Helper::Curses::RUBINE)">Typical Threaded Code In Ruby:</line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">def read_from_socket</line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">  Thread.new do</line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">    loop do</line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)">      # some blocking IO</line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">    end</line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">  end</line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">end</line>
+  </code>
+</body>
+
+<!--
+  - Soooo many nested blocks
+  - `Thread.new` and `loop` are closures
+  - celluloid / event machine would help out here
+  - GIL / j-ruby confusion
+    - Not truly concurrent for computation
+-->

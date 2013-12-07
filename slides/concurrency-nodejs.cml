@@ -1,0 +1,23 @@
+<title style="color_pair(Helper::Curses::YELLOW)">[ CONCURRENCY ]</title>
+
+<body>
+  <code>
+    <line style="color_pair(Helper::Curses::YELLOW)">Similar Code in Node.js:</line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">socket.on('data', function(chunk) {</line>
+    <line>
+      <span style="color_pair(Helper::Curses::DARK_GRAY)"> # some</span>
+      <span style="color_pair(Helper::Curses::WHITE)"> non</span>
+      <span style="color_pair(Helper::Curses::DARK_GRAY)">blocking code</span>
+    </line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">});</line>
+  </code>
+</body>
+
+<!--
+  - Wow, short (the loop is built into the langauge).
+  - Lies, all lies.  This isn't really threaded code.
+    - Node only has one thread.
+    - Same shortcommings as MRI
+  - Node doesn't even have a `thread` module.  The closes it has is `Child Process`
+    - This makes perfect sence.  If you can't multicore thread, and non-blocking IO is built in to the language what do you need threads for?
+-->
