@@ -8,6 +8,8 @@ class SlideList
     "a-gem",
   ]
 
+  attr_reader :current
+
   def initialize(start = 0)
     @current = start - 1
   end

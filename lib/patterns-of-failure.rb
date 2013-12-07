@@ -16,8 +16,6 @@ Curses.init_screen
 Curses.noecho
 Curses.curs_set(0) # no cursor please
 
-at_exit { Curses.close_screen }
-
 height      = Curses.lines
 width       = Curses.cols
 main_window = MainWindow.new(Curses::Window.new height - 5, width, 0, 0)
@@ -25,6 +23,9 @@ q_and_a     = QandAWindow.new(Curses::Window.new 5, width, main_window.maxy, 0)
 slides      = SlideList.new(ARGV[0].to_i)
 
 CML.new(main_window, File.read(slides.next)).render
+
+at_exit { puts "Last Slide: #{slides.current}" if $!.kind_of?(RuntimeError) }
+at_exit { Curses.close_screen }
 
 loop do
   case STDIN.getch
