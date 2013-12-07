@@ -12,6 +12,7 @@ class CML
   end
 
   def render
+    @window.clear
     render_loop @document
     @window.refresh
   end

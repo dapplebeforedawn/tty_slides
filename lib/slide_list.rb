@@ -3,10 +3,13 @@ class SlideList
 
   SLIDES = [
     "introduction",
+    "covermymeds",
+    "cover-all-mymeds",
+    "a-gem",
   ]
 
-  def initialize
-    @current = -1
+  def initialize(start = 0)
+    @current = start - 1
   end
 
   def next
