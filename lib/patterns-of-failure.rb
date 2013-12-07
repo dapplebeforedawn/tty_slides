@@ -1,11 +1,11 @@
+require 'curses'
+require 'io/console'
+
 require 'patterns-of-failure/version'
 require 'helpers/helper'
 require 'cml/cml'
 require 'main_window'
 require 'q_and_a_window'
-
-require 'curses'
-require 'io/console'
 
 require 'pry'
 
