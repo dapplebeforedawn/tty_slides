@@ -3,8 +3,17 @@ require 'delegate'
 class MainWindow < SimpleDelegator
   def initialize window
     super
-    box("|", "-")
-    addstr('[ FAIL ]')
     refresh
+  end
+
+  def to_title_position
+    setpos(1, 1)
+  end
+
+  def refresh
+    box("|", "-")
+    setpos(0, 0)
+    addstr('[ Ruby Fail ]')
+    super
   end
 end

@@ -1,6 +1,6 @@
 require 'nokogiri'
 class CML
-  BORDER_COST = 2
+  PADDING = 2
 
   attr_accessor :window
   attr_accessor :text
@@ -12,21 +12,31 @@ class CML
   end
 
   def render
-    vertically_center
     render_loop @document
     @window.refresh
   end
 
   private
 
-  def vertically_center
-    top_line = (@window.maxy - @document.css('div').size) / 2 - BORDER_COST
+  def vertically_center(fragment)
+    top_line = (@window.maxy - fragment.css('div').size) / 2 - PADDING
     @window.setpos(top_line, @window.curx)
   end
 
   def horizontally_center(text)
     left_pos = (@window.maxx - text.size) / 2
-    @window.setpos(@window.cury, left_pos)
+    @window.setpos(@window.cury+1, left_pos)
+  end
+
+  def left_align(fragment)
+    left_pos = PADDING
+    @current_offset ||= 0
+    @window.setpos(@window.cury + 1, left_pos + @current_offset)
+  end
+
+  def offset_for_code_box(fragment)
+    largest_fragment = fragment.css('line').map(&:text).max_by(&:length)
+    @current_offset = (@window.maxx - largest_fragment.size) / 2
   end
 
   # DFS
@@ -39,6 +49,14 @@ class CML
 
     if fragment.node_name == "div"
       div fragment[:style], fragment.text, &recurse
+    elsif fragment.node_name == "title"
+      title fragment[:style], fragment.text, &recurse
+    elsif fragment.node_name == "body"
+      body fragment[:style], fragment, &recurse
+    elsif fragment.node_name == "code"
+      code fragment[:style], fragment, &recurse
+    elsif fragment.node_name == "line"
+      line fragment[:style], fragment.text, &recurse
     elsif fragment.node_name == "span"
       span fragment[:style], &recurse
     elsif fragment.node_name == "text"
@@ -52,6 +70,16 @@ class CML
     Nokogiri::HTML.parse(@text)
   end
 
+  def title(attrs, text, &block)
+    @window.to_title_position
+    attrib *split_attrs(attrs), &block
+  end
+
+  def body(attrs, fragment, &block)
+    vertically_center(fragment)
+    attrib *split_attrs(attrs), &block
+  end
+
   def div(attrs, text, &block)
     @window.setpos(@window.cury + 1, @window.curx)
     horizontally_center(text)
@@ -62,12 +90,22 @@ class CML
     attrib *split_attrs(attrs), &block
   end
 
+  def line(attrs, fragment, &block)
+    left_align(fragment)
+    attrib *split_attrs(attrs), &block
+  end
+
+  def code(attrs, fragment, &block)
+    offset_for_code_box(fragment)
+    attrib *split_attrs(attrs), &block
+  end
+
   def split_attrs(attrs_string)
     attrs_string.to_s.split(",")
   end
 
   def text(text)
-    @window << text
+    @window << text unless text.match(/^\s+$/) # squash white space like real HTML
     yield
   end
 
