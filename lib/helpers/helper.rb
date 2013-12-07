@@ -1,5 +1,4 @@
-require 'curses'
-
 module Helper
 end
 
+require 'helpers/curses'

@@ -15,3 +15,9 @@
  1. Confident Ruby
  1. Expressiveness
  1. Wow big tool box
+
+cml specification:
+  - two types of elements, `<div>` and `<span>`
+  - attributes must be curses attribute calls e.g.
+  `Curses.color_pair(RED_COLOR)` becomes `color_pair(RED_COLOR)`
+  - Text is always both vertically and horizontally centered

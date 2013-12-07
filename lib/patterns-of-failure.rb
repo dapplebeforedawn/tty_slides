@@ -1,10 +1,13 @@
 require 'patterns-of-failure/version'
 require 'helpers/helper'
+require 'cml/cml'
 
 require 'curses'
 require 'io/console'
 
-Curses.init_screen
+require 'pry'
+
+# Curses.init_screen
 Curses.noecho
 
 at_exit { Curses.close_screen }
@@ -23,4 +26,7 @@ q_and_a.addstr('[ Q and A ]')
 main_window.refresh
 q_and_a.refresh
 
+path = File.join File.dirname(__FILE__), "..", "doc", "introduction.cml"
+cml = CML.new main_window, File.read(path)
+cml.render
 STDIN.getch
