@@ -1,5 +1,7 @@
 require 'nokogiri'
 class CML
+  BORDER_COST = 2
+
   attr_accessor :window
   attr_accessor :text
 
@@ -10,11 +12,22 @@ class CML
   end
 
   def render
+    vertically_center
     render_loop @document
     @window.refresh
   end
 
   private
+
+  def vertically_center
+    top_line = (@window.maxy - @document.css('div').size) / 2 - BORDER_COST
+    @window.setpos(top_line, @window.curx)
+  end
+
+  def horizontally_center(text)
+    left_pos = (@window.maxx - text.size) / 2
+    @window.setpos(@window.cury, left_pos)
+  end
 
   # DFS
   def render_loop(fragment)
@@ -25,7 +38,7 @@ class CML
     }
 
     if fragment.node_name == "div"
-      div fragment[:style], &recurse
+      div fragment[:style], fragment.text, &recurse
     elsif fragment.node_name == "span"
       span fragment[:style], &recurse
     elsif fragment.node_name == "text"
@@ -39,13 +52,18 @@ class CML
     Nokogiri::HTML.parse(@text)
   end
 
-  def div(attrs, &block)
-    @window.insertln
-    attrib *attrs.to_s.split(","), &block
+  def div(attrs, text, &block)
+    @window.setpos(@window.cury + 1, @window.curx)
+    horizontally_center(text)
+    attrib *split_attrs(attrs), &block
   end
 
   def span(attrs, &block)
-    attrib *attrs.to_s.split(","), &block
+    attrib *split_attrs(attrs), &block
+  end
+
+  def split_attrs(attrs_string)
+    attrs_string.to_s.split(",")
   end
 
   def text(text)

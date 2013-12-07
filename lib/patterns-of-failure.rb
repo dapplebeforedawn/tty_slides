@@ -7,8 +7,9 @@ require 'io/console'
 
 require 'pry'
 
-# Curses.init_screen
+Curses.init_screen
 Curses.noecho
+Curses.curs_set(0) # no cursor please
 
 at_exit { Curses.close_screen }
 
