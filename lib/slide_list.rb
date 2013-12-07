@@ -21,5 +21,3 @@ class SlideList
     BASE_PATH + "#{SLIDES[@current]}.cml"
   end
 end
-
-

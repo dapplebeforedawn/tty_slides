@@ -8,4 +8,3 @@ class MainWindow < SimpleDelegator
     refresh
   end
 end
-

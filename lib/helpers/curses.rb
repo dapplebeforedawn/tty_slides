@@ -46,4 +46,3 @@ module Helper::Curses
     (Curses.cols / 2) - (text.length / 2)
   end
 end
-

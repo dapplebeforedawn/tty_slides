@@ -8,4 +8,3 @@ class QandAWindow < SimpleDelegator
     refresh
   end
 end
-
