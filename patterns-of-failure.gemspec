@@ -5,11 +5,11 @@ require 'patterns-of-failure/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "patterns-of-failure"
-  gem.version       = Patterns::Of::Failure::VERSION
+  gem.version       = PatternsOfFailure::VERSION
   gem.authors       = ["Mark Lorenz"]
   gem.email         = ["markjlorenz@dapplebeforedawn.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{When ruby is wrong.}
+  gem.summary       = %q{A presentation that tells you you're doing it all wrong.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)

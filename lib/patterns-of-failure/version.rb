@@ -1,7 +1,3 @@
-module Patterns
-  module Of
-    module Failure
-      VERSION = "0.0.1"
-    end
-  end
+module PatternsOfFailure
+  VERSION = "0.0.1"
 end
