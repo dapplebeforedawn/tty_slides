@@ -1,5 +1,5 @@
 class SlideList
-  BASE_PATH = Pathname.new(ROOT) + ".." + "doc"
+  BASE_PATH = Pathname.new(ROOT) + ".." + "slides"
 
   SLIDES = [
     "introduction",

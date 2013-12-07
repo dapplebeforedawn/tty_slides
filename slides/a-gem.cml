@@ -1,0 +1,9 @@
+<title style="color_pair(Helper::Curses::ORANGE)">[ BOUNS ]</title>
+
+<body>
+  <div>This talk is a real </span><span style="color_pair(Helper::Curses::RUBINE)">gem</span></div>
+  <div style="color_pair(Helper::Curses::LIGHT_GRAY)">`gem install patterns-of-failure-talk`</div>
+  <div>https://www.github.com/dapplebeforedawn/patterns-of-failure</div>
+  <div></div>
+  <div style="color_pair(Helper::Curses::YELLOW)">THANK YOU!</div>
+</body>
