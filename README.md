@@ -10,7 +10,7 @@ gem install patterns-of-failure
 
 ## Usage
 ```bash
-fail.rb
+patterns-of-failure.rb
 ```
 
 ## Contributing

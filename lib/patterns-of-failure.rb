@@ -1,11 +1,14 @@
 require 'curses'
 require 'io/console'
 
+ROOT = File.dirname(__FILE__)
+
 require 'patterns-of-failure/version'
 require 'helpers/helper'
 require 'cml/cml'
 require 'main_window'
 require 'q_and_a_window'
+require 'slide_list'
 
 require 'pry'
 
@@ -19,8 +22,17 @@ height      = Curses.lines
 width       = Curses.cols
 main_window = MainWindow.new(Curses::Window.new height - 5, width, 0, 0)
 q_and_a     = QandAWindow.new(Curses::Window.new 5, width, main_window.maxy, 0)
+slides      = SlideList.new
 
-path = File.join File.dirname(__FILE__), "..", "doc", "introduction.cml"
-cml = CML.new main_window, File.read(path)
-cml.render
-STDIN.getch
+CML.new(main_window, File.read(slides.next)).render
+
+loop do
+  case STDIN.getch
+  when /b/i
+    CML.new(main_window, File.read(slides.previous)).render
+  when /q/i
+    exit
+  else
+    CML.new(main_window, File.read(slides.next)).render
+  end
+end
