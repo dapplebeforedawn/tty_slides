@@ -1,0 +1,11 @@
+<title style="color_pair(Helper::Curses::RUBINE)">[ BYTES ]</title>
+
+<body>
+  <code>
+    <line style="color_pair(Helper::Curses::RUBINE)">SUMMARY:</line>
+    <line>  - Byte manipulation in Ruby can be a little ugly</line>
+    <line>    - That feels weird to say, "<span style="color_pair(Helper::Curses::LIGHT_GRAY)">ugly ruby code</span>"</line>
+    <line>  - Hard to keep the string/byte/number context clear.</line>
+    <line>  - The "bit shift" operator (`<<`) is weird.  Remember it's a string.</line>
+  </code>
+</body>

@@ -1,0 +1,36 @@
+<title style="color_pair(Helper::Curses::RUBINE)">[ BYTES ]</title>
+
+<body>
+  <code>
+    <line style="color_pair(Helper::Curses::RUBINE)">Working with Bytes in Ruby:</line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)">#! /usr/bin/env ruby</line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)"># read 10 random bytes</line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">p File.open("/dev/random").read(10).class</line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)">#  => String</line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">p File.open("/dev/random").read(10)</line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)">#  => "\xC0\\A@\x9B\x10\xA9\xE9\xC5E"</line>
+    <line></line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)"># 0x0200 == 512 == b1000000000</line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">`printf "\x02\x00" > small.bin`</line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">p bytes = File.open("./small.bin").read(2)  <span style="color_pair(Helper::Curses::DARK_GRAY)">#=> "\x02\x00"</span></line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">p bytes[0]                                  <span style="color_pair(Helper::Curses::DARK_GRAY)">#=> "\x02"</span></line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">p bytes.bytes.first                         <span style="color_pair(Helper::Curses::DARK_GRAY)">#=> "\x02"</span></line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">p bytes.unpack("S>*")                       <span style="color_pair(Helper::Curses::DARK_GRAY)">#=> 512</span></line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)"># \x in a string means "the following 2 chars represent 8 literal bits on disk"</line>
+  </code>
+</body>
+
+<!--
+  Why care?
+    Becuase all software is a number, usually represented in base-16 (hex), as bytes.   Once you understand this it's like understanding that (most) everything in Ruby inherits from Object which has Kernel mixed in.
+
+  - Binary data in ruby is stored in a string, this is hard to wrap your head around.
+  - What happens in if you try to bitshift "\x02"?
+-->
+
+
+
+
+
+
+

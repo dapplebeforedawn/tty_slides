@@ -12,6 +12,8 @@ class SlideList
     "events-ruby",
     "events-nodejs",
     "events-summary",
+    "bytes-ruby",
+    "bytes-nodejs",
     "a-gem",
   ]
 
