@@ -20,7 +20,7 @@ class CML
   private
 
   def vertically_center(fragment)
-    top_line = (@window.maxy - fragment.css('div').size) / 2 - PADDING
+    top_line = (@window.maxy - fragment.css('div,line').size) / 2 - PADDING
     @window.setpos(top_line, @window.curx)
   end
 
