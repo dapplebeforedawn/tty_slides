@@ -1,0 +1,17 @@
+<title style="color_pair(Helper::Curses::RUBINE)">[ DISTRIBUTION ]</title>
+
+<body>
+  <code>
+    <line style="color_pair(Helper::Curses::RUBINE)">What they'll do:</line>
+    <line style="color_pair(Helper::Curses::WHITE)"> - Findout their system ruby isn't the ruby you required</line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)">   because the program just crashes. </line>
+    <line style="color_pair(Helper::Curses::WHITE)"> - Maybe they'll install RVM/Chruby/RBEnv</line>
+    <line style="color_pair(Helper::Curses::WHITE)"> - Maybe properly edit their .bashrc</line>
+    <line style="color_pair(Helper::Curses::WHITE)"> - Maybe they'll source it</line>
+    <line style="color_pair(Helper::Curses::WHITE)"> - Maybe they'll get your programming running.</line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)">   probably not.</line>
+  </code>
+</body>
+
+<!--
+-->

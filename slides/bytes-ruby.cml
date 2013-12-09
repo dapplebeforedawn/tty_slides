@@ -5,10 +5,10 @@
     <line style="color_pair(Helper::Curses::RUBINE)">Working with Bytes in Ruby:</line>
     <line style="color_pair(Helper::Curses::DARK_GRAY)">#! /usr/bin/env ruby</line>
     <line style="color_pair(Helper::Curses::DARK_GRAY)"># read 10 random bytes</line>
-    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">p File.open("/dev/random").read(10).class</line>
-    <line style="color_pair(Helper::Curses::DARK_GRAY)">#  => String</line>
     <line style="color_pair(Helper::Curses::LIGHT_GRAY)">p File.open("/dev/random").read(10)</line>
     <line style="color_pair(Helper::Curses::DARK_GRAY)">#  => "\xC0\\A@\x9B\x10\xA9\xE9\xC5E"</line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">p File.open("/dev/random").read(10).class</line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)">#  => String</line>
     <line></line>
     <line style="color_pair(Helper::Curses::DARK_GRAY)"># 0x0200 == 512 == b1000000000</line>
     <line style="color_pair(Helper::Curses::LIGHT_GRAY)">`printf "\x02\x00" > small.bin`</line>

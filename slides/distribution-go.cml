@@ -1,0 +1,14 @@
+<title style="color_pair(Helper::Curses::ORANGE)">[ DISTRIBUTION ]</title>
+
+<body>
+  <code>
+    <line style="color_pair(Helper::Curses::ORANGE)">Distributing GO Software:</line>
+    <line style="color_pair(Helper::Curses::WHITE)">$ go build your_go_source.go</line>
+    <line style="color_pair(Helper::Curses::WHITE)">$ GOOS=linux go build your_go_source.go</line>
+    <line style="color_pair(Helper::Curses::ORANGE)"></line>
+    <line style="color_pair(Helper::Curses::ORANGE)">YES.  We just made standalone binaries for both OSX and linux.</line>
+  </code>
+</body>
+
+<!--
+-->

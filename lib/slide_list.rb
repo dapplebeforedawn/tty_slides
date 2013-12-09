@@ -14,6 +14,11 @@ class SlideList
     "events-summary",
     "bytes-ruby",
     "bytes-nodejs",
+    "distribution-ruby",
+    "distribution-ruby-2",
+    "distribution-ruby-3",
+    "distribution-ruby-4",
+    "distribution-go",
     "a-gem",
   ]
 
