@@ -20,6 +20,10 @@ class SlideList
     "distribution-ruby-4",
     "distribution-go",
     "distribution-summary",
+    "package-managment-ruby",
+    "package-managment-nodejs",
+    "package-managment-go",
+    "package-managment-summary",
     "a-gem",
   ]
 

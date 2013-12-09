@@ -1,0 +1,9 @@
+<title style="color_pair(Helper::Curses::RUBINE)">[ PACKAGE MANAGMENT ]</title>
+
+<body>
+  <code>
+    <line style="color_pair(Helper::Curses::RUBINE)">SUMMARY:</line>
+    <line>  - The current situation is terrible.</line>
+    <line>  - Maybe the merger of RubyGems and Bundler will save us.</line>
+  </code>
+</body>

@@ -1,0 +1,20 @@
+<title style="color_pair(Helper::Curses::ORANGE)">[ PACKAGE MANAGMENT ]</title>
+
+<body>
+  <code>
+    <line style="color_pair(Helper::Curses::ORANGE)">Package Managment in GO:</line>
+    <line style="color_pair(Helper::Curses::WHITE)"> - Each app carries around it's own deps</line>
+    <line style="color_pair(Helper::Curses::WHITE)"> - Libraries are just git repositories</line>
+    <line></line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">import (</line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">    "github.com/dapplebeforedawn/pty"</line>
+    <line style="color_pair(Helper::Curses::LIGHT_GRAY)">)</line>
+  </code>
+</body>
+
+<!--
+  - Go knows to go to github, and download from here.
+  - Versions are locked by a tag or SHA
+  - GIT FTW!
+-->
+
