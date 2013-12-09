@@ -8,6 +8,7 @@ class QandAWindow < SimpleDelegator
 
   def refresh
     box("|", "-")
+    setpos(0, 0)
     addstr('[ Q and A ]')
     super
   end

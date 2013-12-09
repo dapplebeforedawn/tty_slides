@@ -1,3 +1,7 @@
+# lazy options parsing:
+#   ARGV[0] - the slide you want to start on
+#   ARGV[1] - the q and q server hostname
+#   ARGV[2] - the q and q server port
 require 'curses'
 require 'io/console'
 
@@ -8,9 +12,11 @@ require 'helpers/helper'
 require 'cml/cml'
 require 'main_window'
 require 'q_and_a_window'
+require 'q_and_a_client'
 require 'slide_list'
+require 'options'
 
-require 'pry'
+options = Options.parse!
 
 Curses.init_screen
 Curses.noecho
@@ -20,7 +26,13 @@ height      = Curses.lines
 width       = Curses.cols
 main_window = MainWindow.new(Curses::Window.new height - 5, width, 0, 0)
 q_and_a     = QandAWindow.new(Curses::Window.new 5, width, main_window.maxy, 0)
-slides      = SlideList.new(ARGV[0].to_i)
+slides      = SlideList.new(options.start_at)
+
+q_a_client = QandAClient.new(q_and_a, options.host, options.port)
+if !q_a_client.connected?
+  main_window.resize height, width
+  Curses.refresh
+end
 
 CML.new(main_window, File.read(slides.next)).render
 
