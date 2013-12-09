@@ -24,6 +24,7 @@ class SlideList
     "package-managment-nodejs",
     "package-managment-go",
     "package-managment-summary",
+    "ruby-wins",
     "a-gem",
   ]
 

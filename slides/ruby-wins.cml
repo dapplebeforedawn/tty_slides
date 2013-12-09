@@ -1,0 +1,16 @@
+<title style="color_pair(Helper::Curses::RUBINE)">[ RUBY IS STILL GREAT ]</title>
+
+<body>
+  <code>
+    <line style="color_pair(Helper::Curses::RUBINE)">When to use Ruby:</line>
+    <line style="color_pair(Helper::Curses::WHITE)"> - When expressiveness is important</line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)">   - Ruby's object model is amazing</line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)">   - I <span style="color_pair(Helper::Curses::WHITE), Curses::A_BOLD">♡ </span><span style="color_pair(Helper::Curses::DARK_GRAY)"> blocks</span></line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)">   - RSPEC!</line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)">   - Confident Ruby</line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)">   - Massive toolbox</line>
+  </code>
+</body>
+
+<!--
+-->
