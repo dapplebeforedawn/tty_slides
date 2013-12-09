@@ -2,7 +2,7 @@
 
 <body>
   <code>
-    <line style="color_pair(Helper::Curses::YELLOW)">Working with Bytes in Ruby:</line>
+    <line style="color_pair(Helper::Curses::YELLOW)">Working with Bytes in Node.js:</line>
 
     <line style="color_pair(Helper::Curses::LIGHT_GRAY)">fs    = require "fs"</line>
     <line style="color_pair(Helper::Curses::LIGHT_GRAY)">bytes = fs.readFileSync("./small.bin")</line>
