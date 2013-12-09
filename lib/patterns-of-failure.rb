@@ -24,7 +24,7 @@ slides      = SlideList.new(ARGV[0].to_i)
 
 CML.new(main_window, File.read(slides.next)).render
 
-at_exit { puts "Last Slide: #{slides.current}" if $!.kind_of?(Error) }
+at_exit { puts "Last Slide: #{slides.current}" if $!.kind_of?(StandardError) }
 at_exit { Curses.close_screen }
 
 loop do
