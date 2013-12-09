@@ -1,0 +1,6 @@
+<title style="color_pair(Helper::Curses::RUBINE)">[ DISTRIBUTION ]</title>
+
+<body>
+  <div style="color_pair(Helper::Curses::RUBINE)">SUMMARY:</div>
+  <div>Think really hard if you're building ruby code for distribution.</div>
+</body>

@@ -19,6 +19,7 @@ class SlideList
     "distribution-ruby-3",
     "distribution-ruby-4",
     "distribution-go",
+    "distribution-summary",
     "a-gem",
   ]
 
