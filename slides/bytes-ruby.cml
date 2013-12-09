@@ -16,7 +16,8 @@
     <line style="color_pair(Helper::Curses::LIGHT_GRAY)">p bytes[0]                                  <span style="color_pair(Helper::Curses::DARK_GRAY)">#=> "\x02"</span></line>
     <line style="color_pair(Helper::Curses::LIGHT_GRAY)">p bytes.bytes.first                         <span style="color_pair(Helper::Curses::DARK_GRAY)">#=> "\x02"</span></line>
     <line style="color_pair(Helper::Curses::LIGHT_GRAY)">p bytes.unpack("S>*")                       <span style="color_pair(Helper::Curses::DARK_GRAY)">#=> 512</span></line>
-    <line style="color_pair(Helper::Curses::DARK_GRAY)"># \x in a string means "the following 2 chars represent 8 literal bits on disk"</line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)"># \x in a string means "the following 2 chars</line>
+    <line style="color_pair(Helper::Curses::DARK_GRAY)"># represent 8 literal bits on disk"</line>
   </code>
 </body>
 
