@@ -5,6 +5,7 @@ class SlideList
     "introduction",
     "covermymeds",
     "cover-all-mymeds",
+    "three-app-demo",
     "concurrency-ruby",
     "concurrency-go",
     "concurrency-nodejs",
