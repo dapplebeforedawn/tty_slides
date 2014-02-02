@@ -2,6 +2,11 @@
 
 > Gem for presenting slides with the terminal
 
+## Screenshots
+![screenshot1](https://github.com/dapplebeforedawn/tty_slides/raw/master/screenshots/image1.png)
+![screenshot2](https://github.com/dapplebeforedawn/tty_slides/raw/master/screenshots/image2.png)
+![screenshot3](https://github.com/dapplebeforedawn/tty_slides/raw/master/screenshots/image3.png)
+
 ## Installation
 
 ```bash
