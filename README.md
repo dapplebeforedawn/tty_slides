@@ -24,8 +24,8 @@ class TtySlides::SlideList
   ]
 end
 
-# call `.start`
-TtySlides.start
+# call `#start`
+TtySlides.new('[ My Presentation ]').start
 ```
 
 Start the presentation:
