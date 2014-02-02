@@ -1,4 +1,4 @@
-class SlideList
+class TtySlides::SlideList
   attr_reader :current
 
   def initialize(start = 0)

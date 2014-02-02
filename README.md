@@ -9,20 +9,28 @@ gem install tty_slides
 ```
 
 ## Usage
+Create a startup file (e.g. `start.rb`)
 ```ruby
+#! /usr/bin/env ruby
+
+require "tty_slides"
+
 # define the BASE_PATH and SLIDES
-class SlideList
-  BASE_PATH = Pathname.new(ROOT) + ".." + "slides"
+class TtySlides::SlideList
+  BASE_PATH = Pathname.new(__FILE__) + ".." + "slides"
 
   SLIDES = [
-    "introduction",
-    "covermymeds",
+    "introduction"
   ]
 end
+
+# call `.start`
+TtySlides.start
 ```
 
+Start the presentation:
 ``bash
-
+bundle exec ruby start.rb
 ```
 
 ## Adding Slides
