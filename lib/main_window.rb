@@ -1,8 +1,9 @@
 require 'delegate'
 
 class TtySlides::MainWindow < SimpleDelegator
-  def initialize window
-    super
+  def initialize window, title=''
+    @title = title
+    super window
     refresh
   end
 
@@ -13,7 +14,7 @@ class TtySlides::MainWindow < SimpleDelegator
   def refresh
     box("|", "-")
     setpos(0, 0)
-    addstr('[ Ruby Fail ]')
+    addstr(@title)
     super
   end
 end
