@@ -1,6 +1,6 @@
 require 'optparse'
 require 'ostruct'
-module Options
+module TtySlides::Options
   def self.parse!
     options = OpenStruct.new host: "localhost", port: 3000,
                          start_at: 0

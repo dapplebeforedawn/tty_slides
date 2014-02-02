@@ -1,6 +1,6 @@
 require 'delegate'
 
-class QandAWindow < SimpleDelegator
+class TtySlides::QandAWindow < SimpleDelegator
   def initialize window
     super
     refresh

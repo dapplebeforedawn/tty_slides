@@ -1,6 +1,6 @@
 require 'socket'
 
-class QandAClient
+class TtySlides::QandAClient
   def initialize q_and_a_window, host="localhost", port=3000
     @q_and_a_window = q_and_a_window
     @host           = host || "localhost"
