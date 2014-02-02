@@ -1,9 +1,0 @@
-<title style="color_pair(Helper::Curses::RUBINE)">[ EVENTED PROGRAMMING ]</title>
-
-<body>
-  <code>
-    <line style="color_pair(Helper::Curses::RUBINE)">SUMMARY:</line>
-    <line>  - You can do evented code in ruby, but it's the hardway.</line>
-    <line>  - When you need events, use a language that was built for it.</line>
-  </code>
-</body>

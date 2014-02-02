@@ -7,7 +7,7 @@ require 'io/console'
 
 ROOT = File.dirname(__FILE__)
 
-require 'patterns-of-failure/version'
+require 'tty_slides/version'
 require 'helpers/helper'
 require 'cml/cml'
 require 'main_window'

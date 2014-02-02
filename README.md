@@ -1,17 +1,30 @@
-# Patterns::Of::Failure
+# TTY Slides
 
-> Doing it wrong with Ruby
+> Gem for presenting slides with the terminal
 
 ## Installation
 
 ```bash
-gem install patterns-of-failure
+gem install tty_slides
 ```
 
 ## Usage
-```bash
-patterns-of-failure.rb
+```ruby
+# define the BASE_PATH and SLIDES
+class SlideList
+  BASE_PATH = Pathname.new(ROOT) + ".." + "slides"
+
+  SLIDES = [
+    "introduction",
+    "covermymeds",
+  ]
+end
 ```
+
+``bash
+
+```
+
 ## Adding Slides
 Slides are stored in bastardized version of HTML that can be rendred with n-curses.  They are found in the `doc/` folder
 ### CML specification
